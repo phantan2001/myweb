@@ -10,20 +10,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="./script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
 </head>
 
 <body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
     <nav class="navbar" id="navbar">
         <div class="max-width">
             <div class="logo">
                 <a href="#">My portfo<span>lio</span></a>
             </div>
             <ul class="menu" id="menu">
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Về tôi</a></li>
-                <li><a href="#">Kỹ năng</a></li>
-                <li><a href="#">Các dự án</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#home" class="menu-btn">Trang chủ</a></li>
+                <li><a href="#about" class="menu-btn">Giới thiệu</a></li>
+                <li><a href="#services" class="menu-btn">Dịch Vụ</a></li>
+                <li><a href="#skills" class="menu-btn">Kỹ Năng</a></li>
+                <li><a href="#contact" class="menu-btn">Liên hệ</a></li>
             </ul>
             <div class="menu-btn" id="menu-btn">
                 <i class="fa-solid fa-bars"></i>
@@ -37,7 +41,7 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Tân Phan</div>
-                <div class="text-3">I'm <span>front-end developer</span></div>
+                <div class="text-3">I'm <span class="typing"></span></div>
             </div>
         </div>
     </section>
@@ -206,6 +210,10 @@
         </div>
     </section>
 
+    <!-- footer -->
+    <footer>
+        <span>Create By <a href="#">TrongTanCoding</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    </footer>
 </body>
 
 </html>

@@ -5,7 +5,28 @@ $(document).ready(function() {
         } else {
             $('.navbar').removeClass("sticky");
         }
+        if(this.scrollY > 800) {
+            $('.scroll-up-btn').addClass("show");
+        } else {
+            $('.scroll-up-btn').removeClass("show");
+        }
     });
+
+    //scroll-up-btn 
+    $('.scroll-up-btn').click(function() {
+        $('html').animate({scrollTop:0});
+    });
+
+    //typing animation
+    var typed = new Typed(".typing", {
+        strings: ["Front-end Developer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    })
+
+
+
     //toggle menu/navbar
     $('.menu-btn').click(function() {
         $('.navbar .menu').toggleClass("active");

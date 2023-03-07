@@ -6,10 +6,40 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
+}
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    right: 30px;
+    bottom: 10px;
+    background-color: rgb(226, 47, 23);
+    border-radius: 10px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn.show:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 .navbar {
     position: fixed;
@@ -37,6 +67,7 @@
     display: inline-block;
 }
 .navbar .menu li a {
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -591,6 +622,34 @@ form .button button:hover {
     transition: all 0.3s ease-in-out;
 }
 
+/* footer-style */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 25px 30px;
+    font-size: 18px;
+}
+footer span a {
+    color: rgb(238, 116, 29);
+    font-size: 20px;
+    animation: color-change 3s infinite;
+    transition: all 0.3s ease;
+}
+    
+
+
+
+
+@keyframes color-change {
+    0% { color: rgb(228, 242, 34); }
+    30% { color: rgb(247, 44, 9); }
+    50% { color: rgb(39, 238, 17); }
+    70% { color: rgb(14, 140, 237); }
+    100% { color: rgb(255, 0, 234); }
+}
+
 
 
 
@@ -672,6 +731,17 @@ form .button button:hover {
     .skills .skills-content .left {
         margin-bottom: 30px;
     } 
+    .contact .contact-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .contact .contact-content .left, 
+    .contact .contact-content .right {
+        width: 85%;
+    }
 }
 @media (max-width: 820px ) {
     .about .about-content {
@@ -695,6 +765,10 @@ form .button button:hover {
     }
     .about .about-content .right .text {
         text-align: justify;
+    }
+    .contact .contact-content .left, 
+    .contact .contact-content .right {
+        width: 90%;
     }
 }
 @media (max-width: 690px ) {
@@ -723,6 +797,10 @@ form .button button:hover {
     .about .about-content .column {
         width: 95%;
     }
+    .contact .contact-content .left, 
+    .contact .contact-content .right {
+        width: 90%;
+    }
 }
 @media (max-width: 570px) {
     .services .services-content {
@@ -743,6 +821,26 @@ form .button button:hover {
     section .title::before {
         bottom: -22px;
     }
+    .contact .contact-content .left, 
+    .contact .contact-content .right {
+        width: 90%;
+    }
+}
+@media (max-width: 490px) {
+    .contact .contact-content .left, 
+    .contact .contact-content .right {
+        width: 90%;
+    }
+    .contact .contact-content .right .fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
 }
 @media (max-width: 410px) {
     .services .title {
@@ -754,5 +852,9 @@ form .button button:hover {
     }
     section .title::before {
         bottom: -22px;
+    }
+    .contact .contact-content .left, 
+    .contact .contact-content .right {
+        width: 90%;
     }
 }
